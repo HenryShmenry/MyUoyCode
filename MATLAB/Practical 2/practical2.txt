@@ -1,0 +1,674 @@
+help circlefn
+ ------------------------------------
+  circlefn - a function to draw a circle of radius r
+ ------------------------------------
+
+circlefn(2)
+
+ans =
+
+  Columns 1 through 4
+
+    2.0000    1.9960    1.9839    1.9639
+
+  Columns 5 through 8
+
+    1.9359    1.9001    1.8567    1.8059
+
+  Columns 9 through 12
+
+    1.7477    1.6825    1.6105    1.5321
+
+  Columns 13 through 16
+
+    1.4475    1.3570    1.2611    1.1601
+
+  Columns 17 through 20
+
+    1.0545    0.9445    0.8308    0.7138
+
+  Columns 21 through 24
+
+    0.5938    0.4715    0.3473    0.2217
+
+  Columns 25 through 28
+
+    0.0952   -0.0317   -0.1585   -0.2846
+
+  Columns 29 through 32
+
+   -0.4096   -0.5329   -0.6541   -0.7727
+
+  Columns 33 through 36
+
+   -0.8881   -1.0000   -1.1078   -1.2112
+
+  Columns 37 through 40
+
+   -1.3097   -1.4029   -1.4905   -1.5721
+
+  Columns 41 through 44
+
+   -1.6474   -1.7160   -1.7777   -1.8322
+
+  Columns 45 through 48
+
+   -1.8794   -1.9190   -1.9509   -1.9749
+
+  Columns 49 through 52
+
+   -1.9909   -1.9990   -1.9990   -1.9909
+
+  Columns 53 through 56
+
+   -1.9749   -1.9509   -1.9190   -1.8794
+
+  Columns 57 through 60
+
+   -1.8322   -1.7777   -1.7160   -1.6474
+
+  Columns 61 through 64
+
+   -1.5721   -1.4905   -1.4029   -1.3097
+
+  Columns 65 through 68
+
+   -1.2112   -1.1078   -1.0000   -0.8881
+
+  Columns 69 through 72
+
+   -0.7727   -0.6541   -0.5329   -0.4096
+
+  Columns 73 through 76
+
+   -0.2846   -0.1585   -0.0317    0.0952
+
+  Columns 77 through 80
+
+    0.2217    0.3473    0.4715    0.5938
+
+  Columns 81 through 84
+
+    0.7138    0.8308    0.9445    1.0545
+
+  Columns 85 through 88
+
+    1.1601    1.2611    1.3570    1.4475
+
+  Columns 89 through 92
+
+    1.5321    1.6105    1.6825    1.7477
+
+  Columns 93 through 96
+
+    1.8059    1.8567    1.9001    1.9359
+
+  Columns 97 through 100
+
+    1.9639    1.9839    1.9960    2.0000
+
+for i = 1:10
+x(i) = 0.5+0.1*i;
+end
+x
+
+x =
+
+  Columns 1 through 4
+
+    0.6000    0.7000    0.8000    0.9000
+
+  Columns 5 through 8
+
+    1.0000    1.1000    1.2000    1.3000
+
+  Columns 9 through 10
+
+    1.4000    1.5000
+
+for i = 1:5
+for j = 1:5
+H(i,j) = 1/(i+j);
+end
+end
+H
+
+H =
+
+  Columns 1 through 4
+
+    0.5000    0.3333    0.2500    0.2000
+    0.3333    0.2500    0.2000    0.1667
+    0.2500    0.2000    0.1667    0.1429
+    0.2000    0.1667    0.1429    0.1250
+    0.1667    0.1429    0.1250    0.1111
+
+  Column 5
+
+    0.1667
+    0.1429
+    0.1250
+    0.1111
+    0.1000
+
+v=1; s=1;
+while s < 500
+s = 2*s;
+v = [v; s];
+end
+v
+
+v =
+
+     1
+     2
+     4
+     8
+    16
+    32
+    64
+   128
+   256
+   512
+
+s
+
+s =
+
+   512
+
+myexp(1,5);
+x=0.5;
+for i = 1:100
+y = 2.5*x*(1-x);
+if (abs(x-y) <= 0.001)
+break
+else
+x=y;
+end
+end
+y
+
+y =
+
+    0.5998
+
+y=0.5;
+for i=1:100
+x=y;
+y=2.5*x*(1-x);
+if (abs(x-y)<=0.001)
+break
+else
+continue
+end
+end
+y
+
+y =
+
+    0.5998
+
+mysum(1)
+
+ans =
+
+     1
+
+mysum(1)
+
+ans =
+
+     1
+
+mysum(2)
+
+ans =
+
+     1
+
+
+ans =
+
+    0.2500
+
+mysum(3)
+
+ans =
+
+     1
+
+
+ans =
+
+    0.2500
+
+
+ans =
+
+    0.1111
+
+mysum(4)
+
+ans =
+
+     1
+
+
+ans =
+
+    0.2500
+
+
+ans =
+
+    0.1111
+
+
+ans =
+
+    0.0625
+
+mysum(2)
+
+ans =
+
+     1
+
+
+ans =
+
+    0.2500
+
+mysum(1)
+
+ans =
+
+     1
+
+mysum(2)
+
+ans =
+
+    1.2500
+
+mysum(200)
+
+ans =
+
+    1.6399
+
+mysum(2000)
+
+ans =
+
+    1.6444
+
+mysum(4000)
+
+ans =
+
+    1.6447
+
+format long
+mysum(200000)
+
+ans =
+
+   1.644929066860741
+
+mysum(10)
+
+ans =
+
+   1.549767731166541
+
+format short
+mysum(10)
+
+ans =
+
+    1.5498
+
+mysum(50)
+
+ans =
+
+    1.6251
+
+mysum(100)
+
+ans =
+
+    1.6350
+
+mysin(10)
+{Not enough input arguments.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('mysin', 'C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\mysin.m', 8)" style="font-weight:bold">mysin</a> (<a href="matlab: opentoline('C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\mysin.m',8,0)">line 8</a>)
+for k=1:n
+        ^
+} 
+mysin(10,3)
+{Unrecognized function or variable 'y'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('mysin', 'C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\mysin.m', 10)" style="font-weight:bold">mysin</a> (<a href="matlab: opentoline('C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\mysin.m',10,0)">line 10</a>)
+    if (abs(x-y)<=0.0001)
+              ^
+} 
+mysin(1,1)
+
+ans =
+
+     9
+
+mysin(1,4)
+
+ans =
+
+        8505
+
+mysin(1,1)
+
+f =
+
+     9
+
+
+s =
+
+    0.2444
+
+
+ans =
+
+     9
+
+mysin(0,0)
+
+f =
+
+     1
+
+
+s =
+
+     0
+
+
+ans =
+
+     0
+
+mysin(1,0)
+
+f =
+
+     1
+
+
+s =
+
+    1.1667
+
+
+ans =
+
+    1.1667
+
+mysin(1,0)
+
+f =
+
+     1
+
+
+s =
+
+     0
+
+
+ans =
+
+     0
+
+mysin(1,1)
+
+f =
+
+     3
+
+
+ans =
+
+   -0.3167
+
+mysin(0,0)
+
+f =
+
+     1
+
+
+ans =
+
+     0
+
+mysin(0,1)
+
+f =
+
+     3
+
+
+ans =
+
+     0
+
+mysin(0,2)
+
+f =
+
+    15
+
+
+ans =
+
+     0
+
+mysin(1,1)
+
+ans =
+
+     0
+
+mysin(1,0)
+
+ans =
+
+     0
+
+mysin(1,0)
+
+ans =
+
+     1
+
+mysin(1,1)
+
+ans =
+
+    0.8333
+
+mysin(1,200)
+
+ans =
+
+    0.8415
+
+mysin(1,1000000)
+
+ans =
+
+    0.8415
+
+mysin(100,3)
+
+ans =
+
+  -1.9758e+10
+
+mysin(0.0000001, 1)
+
+ans =
+
+   1.0000e-07
+
+mysin(0.00000000000001, 1)
+
+ans =
+
+   1.0000e-14
+
+mysin(0.00000000000001, 2)
+
+ans =
+
+   1.0000e-14
+
+mysin(1,5)
+
+ans =
+
+    0.8415
+
+mysin(1,5)
+
+ans =
+
+    0.8415
+
+mysin(2, 20)
+
+ans =
+
+    0.9093
+
+myline(1,2,3,4)
+{<a href="matlab: opentoline('C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\myline.m',2,16)">File: myline.m Line: 2 Column: 16</a>
+Invalid expression. When calling a function or
+indexing a variable, use parentheses. Otherwise,
+check for mismatched delimiters.
+} 
+myline(1,2,3,4)
+{Unrecognized function or variable 'x'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('myline', 'C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\myline.m', 2)" style="font-weight:bold">myline</a> (<a href="matlab: opentoline('C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\myline.m',2,0)">line 2</a>)
+y=b+(d-b)/(c-a)*(x-a);
+                 ^
+} 
+myline(1,2,3,4)
+{Unrecognized function or variable 'x'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('myline', 'C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\myline.m', 2)" style="font-weight:bold">myline</a> (<a href="matlab: opentoline('C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\myline.m',2,0)">line 2</a>)
+plot(x,b+(d-b)/(c-a)*(x-a));
+     ^
+} 
+myline(1,2,3,4)
+{Unrecognized function or variable 'x'.
+
+Error in <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('myline', 'C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\myline.m', 2)" style="font-weight:bold">myline</a> (<a href="matlab: opentoline('C:\Users\henry\OneDrive\Documents\MATLAB\Practical 2\myline.m',2,0)">line 2</a>)
+plot(b+(d-b)/(c-a)*(x-a));
+                    ^
+} 
+myline(1,2,3,4)
+
+ans = 
+
+  <a href="matlab:helpPopup('matlab.graphics.chart.primitive.Line')" style="font-weight:bold">Line</a> with properties:
+
+              Color: [0 0.4470 0.7410]
+          LineStyle: '-'
+          LineWidth: 0.5000
+             Marker: 'none'
+         MarkerSize: 6
+    MarkerFaceColor: 'none'
+              XData: [1 … ] (1×100 double)
+              YData: [2 … ] (1×100 double)
+
+  Show <a href="matlab:if exist('ans', 'var'), matlab.graphics.internal.getForDisplay('ans', ans, 'matlab.graphics.chart.primitive.Line'), else, matlab.graphics.internal.getForDisplay('ans'), end">all properties</a>
+
+myline(1,2,3,4)
+
+ans = 
+
+  <a href="matlab:helpPopup('matlab.graphics.chart.primitive.Line')" style="font-weight:bold">Line</a> with properties:
+
+              Color: [0 0.4470 0.7410]
+          LineStyle: '-'
+          LineWidth: 0.5000
+             Marker: 'none'
+         MarkerSize: 6
+    MarkerFaceColor: 'none'
+              XData: [1 … ] (1×100 double)
+              YData: [2 … ] (1×100 double)
+
+  Show <a href="matlab:if exist('ans', 'var'), matlab.graphics.internal.getForDisplay('ans', ans, 'matlab.graphics.chart.primitive.Line'), else, matlab.graphics.internal.getForDisplay('ans'), end">all properties</a>
+
+if exist('ans', 'var'), matlab.graphics.internal.getForDisplay('ans', ans, 'matlab.graphics.chart.primitive.Line'), else, matlab.graphics.internal.getForDisplay('ans'), end
+      AffectAutoLimits: on
+    AlignVertexCenters: off
+            Annotation: [1×1 matlab.graphics.eventdata.Annotation]
+          BeingDeleted: off
+            BusyAction: 'queue'
+         ButtonDownFcn: ''
+              Children: [0×0 GraphicsPlaceholder]
+              Clipping: on
+                 Color: [0 0.4470 0.7410]
+             ColorMode: 'auto'
+           ContextMenu: [0×0 GraphicsPlaceholder]
+             CreateFcn: ''
+       DataTipTemplate: [1×1 matlab.graphics.datatip.DataTipTemplate]
+             DeleteFcn: ''
+           DisplayName: ''
+      HandleVisibility: 'on'
+               HitTest: on
+         Interruptible: on
+              LineJoin: 'round'
+             LineStyle: '-'
+         LineStyleMode: 'auto'
+             LineWidth: 0.5000
+                Marker: 'none'
+       MarkerEdgeColor: 'auto'
+       MarkerFaceColor: 'none'
+         MarkerIndices: [1 2 … ] (1×100 uint64)
+            MarkerMode: 'auto'
+            MarkerSize: 6
+                Parent: [1×1 Axes]
+         PickableParts: 'visible'
+              Selected: off
+    SelectionHighlight: on
+           SeriesIndex: 1
+           SourceTable: [0×0 table]
+                   Tag: ''
+                  Type: 'line'
+              UserData: []
+               Visible: on
+                 XData: [1 … ] (1×100 double)
+             XDataMode: 'manual'
+           XDataSource: ''
+             XVariable: ''
+                 YData: [2 … ] (1×100 double)
+             YDataMode: 'manual'
+           YDataSource: ''
+             YVariable: ''
+                 ZData: [1×0 double]
+             ZDataMode: 'auto'
+           ZDataSource: ''
+             ZVariable: ''
+
+trianglefn(1.5,1,-0.5,-2.5,1,-2)
+trianglefn(1.5,1,1,-0.5,1,-2)
+trianglefn(1.5,1,1,-0.5,1,-2)
+myline2(1,2,3,4)
+trianglefn(1.5,1,1,-0.5,1,-2)
