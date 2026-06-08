@@ -1,0 +1,113 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\pagestyle{fancy}
+
+
+
+\begin{document}
+\lhead{\color{blue}Real Analysis: Definitions \& Theorems - Crib Sheet}
+\chead{\color{blue}Henry Wise}
+\rhead{\color{blue}Summer Exam EOY}
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item The real number system is a set of numbers with:\\
+    1) Two special numbers, 0 and 1 called the additive and multiplicative identities.
+    2) Two binary operations of addition and multiplication.
+    3) Two inverse ``unary'' operations - and $.^{-1}$.
+    4) An order relation ``$<$''
+    \item Axiom of completeness:\\
+    Suppose $A$ and $B$ are non-empty subsets of $\mathbb{R}$ with the property that if $a\in A$ and $b\in B$ then $a\leq b$. Then there exists $c\in\mathbb{R}$ such that for all $a\in A$ and $b\in B$, $a\leq c\leq b$.
+    \item $L(f,P)=\sum^{N}_{n=1}(x_{n}-x_{n-1})\inf_{x\in[x_{n-1},x_{n}]}f(x)$\\$U(f,P)=\sum^{N}_{n=1}(x_{n}-x_{n-1})\sup_{x\in[x_{n-1},x_{n}]}f(x)$
+    \item Principle of Bounded Monotone Convergence:\\
+    If $(a_{n})_{n\in\mathbb{N}}$ is an increasing sequence which is bounded above, then as $n\to\infty$ it converges to $\sup\left\{a_{n}:n\in\mathbb{N}\right\}$.\\
+    If $(a_{n})_{n\in\mathbb{N}}$ is an decreasing sequence which is bounded below, then as $n\to\infty$ it converges to $\inf\left\{a_{n}:n\in\mathbb{N}\right\}$
+    \item Uniqueness of Limits:\\
+    Suppose $S\subseteq\mathbb{R}$, $f:S\to\mathbb{R}$, $x_{0}\in\mathbb{R}$ and as $x\to x_{0}$, we have $f(x)\to L$ and $f(x)\to M$. We would expect to find that $L=M$: that limits are unique as they are for sequences.
+    \item Thm 3.3: $\nexists x\in\mathbb{Q}$ s.t. $x^{2}=2$
+    \item Thm 3.17: a non empty set $I$ is an interval iff it has the intermediate value property: if $x\in I$ and $z\in I$ and $x<y<z$ then $y\in I$.
+    \item Density of rationals: Suppose $a,b\in\mathbb{R}$ with $a<b$. Then $\exists p/q\in\mathbb{Q}$ with $a<p/q<b$
+    \item Existence of Predecessors: If $n\in\mathbb{N}$ then either $n=1$ or $n-1\in\mathbb{N}$
+    \item Well ordering principle: Every non-empty subset of $\mathbb{N}$ has a minimal element.
+    \item Thm 5.12: If there exists $N\in\mathbb{N}$ s.t. $a_{n}\geq b$ for $n>N$ then $a\geq b$\\
+    pf: For any $\varepsilon>0$ there exists $N_{\varepsilon}\in\mathbb{N}$ s.t. if $n>N_{\varepsilon}$ then $|a_{n}-a|<\varepsilon$ or $a-\varepsilon<a_{n}<a+\varepsilon$. For $n>\max(N,N_{\varepsilon})$ we also have $a_{n}\geq b$. It follows that $b<a+\varepsilon$ for all $\varepsilon>0$ and so $b\leq a$.
+    \item Triangle inequality: $|x+y|\leq|x|+|y|$\\
+    Reverse triangle inequality: $||x|-|y||\leq|x-y|$
+    \item Algebra of limis/ Combination Rules: If a sequence tends to something then a combination of sequences tends to a combination of limits.
+    \item Hierarchy of limits: fast$\to$slow as $n\to\infty$\\
+    $n^{n}$, $n!$, $x^{n}\,(x>1)$, $n^{q}\,(q\in\mathbb{Q}>0)$ $\to\infty$\\
+    $n^{-n}$, $1/n!$, $x^{n}\,(|x|<1)$, $n^{-q}\,(q\in\mathbb{Q}>0)$ $\to0$
+    \item Limit comparison test:\\
+    Suppose $(a_{j})_{j\in\mathbb{N}}$ and $(b_{j})_{j\in\mathbb{N}}$ are strictly positive sequences and $a_{j}/b_{j}$ converges to $L$ as $j\to\infty$. Then:\\
+    1) If $\sum b_{j}$ converges then $\sum a_{j}$ converges\\
+    2) If $L>0$ then $\sum a_{j}$ and $\sum b_{j}$ either both converge or both diverge.
+    \item Cauchy Criterion, Cauchy's general Principle of Convergence: Every convergent sequence is a Cauchy sequence. Every Cauchy sequence converges, so the Cauchy property is equivalent to convergence, 
+    \item Leibniz alternating series test:\\
+    Suppose $(a_{j})_{j\in\mathbb{N}}$ is a decreasing sequence tending to zero. Then $\sum^{\infty}_{j=1}(-1)^{j+1}a_{j}$ converges.
+    \item Cauchy's Condensation Test:\\
+    Suppose $(a_{j})_{j\in\mathbb{N}}$ is a decreasing sequence of non-negative terms. Then the following are equivalent:\\
+    1) $\sum^{\infty}_{j=1}a_{j}$ converges; 2) $\sum^{\infty}_{k=0}2^{k}a_{2^{k}}$ converges.
+    \item Absolute convergence implies convergence; the converse is not true.
+    \item Comparison and limit comparison test for signed terms:\\
+    Comparison test: if $|a_{j}|\leq b_{j}$ for all $j\in\mathbb{N}$ and $\sum^{\infty}_{j=1}b_{j}$ converges, then $\sum^{\infty}_{j=1}a_{j}$ converges absolutely and $\left|\sum^{\infty}_{j=1}a_{j}\right|\leq\sum^{\infty}_{j=1}|a_{j}|\leq\sum^{\infty}_{j=1}b_{j}$\\
+    Limit comparison test: if $b_{j}>0$, $|a_{j}/b_{j}|\to L\in\mathbb{R}$ as $j\to\infty$ and $\sum^{\infty}_{j=1}b_{j}$ converges, then $\sum^{\infty}_{j=1}a_{j}$ converges absolutely.
+    \item Ratio test: suppose a sequence of non-zero terms such that $|a_{j+1}/a_{j}|\to r$ as $j\to\infty$. Then $\sum^{\infty}_{j=1}a_{j}$ either converges absolutely $(r<1)$; diverges $(r>1)$ or we don't know $(r=1)$.
+    \item Thm 19.6: $f(x)=\sum^{\infty}_{n=0}a_{n}(x-x_{0})^{n}$ is continuous and converges on $(x_{0}-R,x_{0}+R)$
+    \item Bolzano's Thm: suppose $a<b$, $g:[a,b]\to\mathbb{R}$ is continuous and $g(a)$ and $g(b)$ have opposite signs. Then $\exists x_{0}\in(a,b)$ s.t. $g(x_{0})=0$.
+    \item Rolle's Thm: Suppose $a<b$ and $g:[a,b]\to\mathbb{R}$ is continuous and differentiable on $(a,b)$, and s.t. $g(a)=g(b)$. Then $\exists x_{0}\in(a,b)$ s.t. $g'(x_{0})=0$
+    \item MVT: $\exists x_{0}\in(a,b)$ s.t. $f'(x_{0})=\frac{f(b)-f(a)}{b-a}$
+    \item Taylor: $f(x_{0}+h)=\sum^{N}_{n=0}\frac{f^{(n)}(x_{0})}{n!}h^{n}+\frac{f^{(N+1)}(c)}{(N+1)!}h^{N+1}$
+    \item $\exp(t)=\sum^{\infty}_{n=0}\frac{t^{n}}{n!}$
+    \item Thm 29.6: Any partitions $P$ \& $Q$ of an interval have a common refinement. eg: make a new partition $R$ that contains all the points of $P$ \& $Q$ discarding duplicates.
+    \item if $P$ \& $Q$ are partitions of $[a,b]$ and $P$ is a refinement of $Q$ then: $L(f,P)\geq L(f,Q)$ and $U(f,P)\leq U(f,Q)$.
+    \item Cauchy Criterion for Riemann Integrability: A function is integrable iff for any $h>0$ $\exists P$ such that $U(f,P)-L(f,P)<h$
+    \item FTC 1: $F(x)=\int^{x}_{p\in[a,b]}f$
+    \item FTC 2: $\int^{b}_{a}=\int^{b}_{a}F'=F(b)-F(a)$
+\end{itemize}
+\end{multicols}
+\newpage
+\lhead{\color{red}Real Analysis Examples - Crib Sheet}
+\chead{\color{red}Henry Wise}
+\rhead{\color{red}Summer Exam EOY}
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Use the property of Archimedes to show that if:\\
+    $S_{1}=\left\{\frac{2n+1}{n+1}:n\in\mathbb{N}\right\}$, Then $\sup(S_{1})=2$\\
+    Soln: We have for $n\in\mathbb{N}$, $(2n+1)/(n+1)<(2n+2)/(n+1)=2$, showing that 2 is an upper bound for $S_{1}$.\\
+    To show that 2 is the least upper bound, it is enough to show that any number $2-h<2$ is not an upper bound, i.e. that there exists $n\in\mathbb{N}$ s.t.\\
+    $\frac{2n+1}{n+1}>2-h\iff2n+1>2n+2-(n+1)h\iff(n+1)h>1\iff n>\frac{1}{h}-1$\\
+    Such $n$ exists by Archimedes (otherwise $1/h-1$ would be an upper bound for $\mathbb{N}$); all steps in the calculation being ``if and only if'', we conclude that $2-h<2$ is not an upper bound for $S_{1}$, and hence that 2 is the least upper bound for $S_{1}$, i.e. that $\sup(S_{1})=2$
+    \item Use Archimedes to show if:\\
+    $S_{2}=\left\{1-\frac{n}{2}:n\in\mathbb{N}\right\}$ that $S_{2}$ is not bounded below.\\
+    Suppose for contradiction that $S_{2}$ is bounded below. Then $\exists a\in\mathbb{R}$ s.t. $\forall n\in\mathbb{N}$, $a\leq1-n/2$. Rearranging, $n\leq2(1-a),\,\forall n\in\mathbb{N}$ contradicting Archimedes.
+    \item let $a_{n}=1-\frac{(-1)^{n}}{n}$ $(n\in\mathbb{N})$\\
+    Show directly from the definition of convergence of a sequence that as $n\to\infty$, $a_{n}\to1$\\
+    Soln: To show that $1-(-1)^{n}/n\to1$ as $n\to\infty$, we need to lead up to the inequality $|1-(-1)^{n}/n-1|<\varepsilon$, or equivalently $1/n<\varepsilon$. So, given $\varepsilon>0$ we choose $N_{\varepsilon}\in\mathbb{N}$ s.t. $N_{\varepsilon}\geq1/\varepsilon$ (Archimedes). Now, if $n>N_{\varepsilon}$ then $1/n>\varepsilon$; as seen above, this is equivalent to $|a_{n}-1|<\varepsilon$. We conclude that $a_{n}\to1$ as $n\to\infty$
+    \item let $b_{n}=1-(-1)^{n}$ $(n\in\mathbb{N})$ show directly from the definition of convergence that $b_{n}$ has no limit as $n\to\infty$.\\
+    Soln: Note that, for even $n$, $b_{n}=0$ and for odd, $b_{n}=2$. If $b_{n}\to b$ as $n\to\infty$ then, because there are odd and even numbers greater than any $N_{\epsilon}$, $b$ would satisfy both $|b|<\varepsilon$ and $|b-2|<\varepsilon$. Equivalently, $-\varepsilon<b<\varepsilon$ and $2-\varepsilon<b<2+\varepsilon$. But, if $\varepsilon=1$ the first of these gives $b<1$ and the second $b>1$; this contradiction shows there is no limit $b$.
+    \item Find the radius of convergence of $\sum^{\infty}_{n=0}\frac{n!}{(2n)!}(x-1)^{n}$\\
+    $\left|\frac{((n+1)!)(x-1)^{n+1}}{(2n+2)!}\frac{(2n)!}{n!(x-1)^{n}}\right|=\frac{n+1}{(2n+2)(2n+1)}|x-1|=\frac{1}{2(2n+1)}|x-1|\to0<1$ as $n\to\infty$. We thus have convergence $\forall x\in\mathbb{R}$ so $R=\infty$.
+    \item Define $f:[-1,1]\to\mathbb{R};\,f(x)=|x|$ (a) Consider the partition $P$ of the interval given by $P=(-1,0,1/2,1)$. Find the lower and upper sums $L(f,P)$ and $U(f,P)$.\\
+    Soln: Subintervals: $[-1,0]$, $[0,1/2]$, $[1/2,1]$ have widths $1$, $1/2$, $1/2$ and infimums $0$, $0$, $1/2$ and supremums $1$, $1/2$, $1$ respectively. So the lower and upper sums are given by:\\
+    $L(f,P)=1\times0+(1/2)\times0+(1/2)\times(1/2)=1/4$\\
+    $U(f,P)=1\times1+(1/2)\times(1/2)+(1/2)\times1=7/4$
+    \item Let $P_{N}$ be the partition formed by dividing $[-1,1]$ into $2N$ subintervals of equal width. Given that $L(f,P_{N})=1-1/N$ and $U(f,P_{N})=1+1/N$, show directly from the definition of the integral, and the basic fact that $L^{1}_{-1}f\leq U^{1}_{-1}f$, that $f$ is integrable on $[-1,1]$. Find $\int^{1}_{-1}f$.\\
+    Soln: We are given that $L(f,P_{N})=1-1/N\to1$ as $N\to\infty$. Since this is an increasing sequence, it converges to $\sup\left\{L(f,P_{N}):N\in\mathbb{N}\right\}\leq L^{1}_{-1}f$; combining these, we have $1\leq L^{1}_{-1}f$. Similarly, we are given that $U(f,P_{N})=1+1/N\to1$ as $N\to\infty$. Since this is a decreasing sequence, it converges to $\inf\left\{U(f,P_{N}):N\in\mathbb{N}\right\}\geq U^{1}_{-1}f$; combining these we have, $1\geq U^{1}_{-1}f$. Now using $L^{1}_{-1}f\leq U^{1}_{-1}f$, we have $1\leq L^{1}_{-1}f\leq U^{1}_{-1}f\leq1$ showing that the lower and upper integrals are both 1, so the function is integrable, with integral 1.
+    \item Suppose $A$ is a bounded, non-empty set of real numbers and let $B=\left\{x-y:x,y\in A\right\}$, Show that $\sup(B)=\sup(A)-\inf(A)$.\\
+    Soln: Suppose $z\in B$, so $z=x-y$ for some $x,y\in A$. Then $x\leq\sup(A)$ and $y\geq\inf(A)$, so $z=x-y\leq\sup(A)-\inf(A)$. This shows that $\sup(A)-\inf(A)$ is an upper bound for $B$. If $h>0$ then $\sup(A)-h/2$ is not an upper bound for $A$, so $\exists x\in A$ with $x>\sup(A)-h/2$. Similarly, $\exists y\in A$ with $y<\inf(A)+h/2$. Subtracting, we find that $B\ni x-y>\sup(A)-\inf(A)-h$, showing that $\sup(A)-\inf(A)-h$ is not an upper bound for $B$. Combining these two, we see that $\sup(A)-\inf(A)$ is the least upper bound for $B$, and so $\sup(B)=\sup(A)-\inf(A)$
+    \item let $f(x)=\frac{x^{4}+3}{4}$ let $x_{1}=2$ and (for $n\in\mathbb{N}$) let $x_{n+1}=f(x_{n})$. Show that $(x_{n})_{n\in\mathbb{N}}$ is a bounded monotonic sequence, and find it's limit.\\
+    Soln: Since $1<x_{1}<3$, it follows that by (a) and induction that $1<x_{n}<3$ for all $n$, showing that $(x_{n})_{n\in\mathbb{N}}$ is bounded. We also have from (a) that $f(x_{n})-x_{n}<0$, i.e. that $x_{n+1}<x_{n}$, showing that $(x_{n})_{n\in\mathbb{N}}$ is strictly decreasing. Now, by the principle of bounded monotonic convergence, $(x_{n})_{n\in\mathbb{N}}$ is convergent, say $x_{n}\to x$ as $n\to\infty$. Now on one hand, $x_{n+1}\to x$ as $n\to\infty$. But on the other hand, $x_{n+1}=(x^{2}_{n}+3)/4\to(x^{2}+3)/4$ as $n\to\infty$. By uniqueness of limits, $x=(x^{2}+3)/4$. Finally we can solve this equation to give $x=1$ or $x=3$; but $x_{1}=2$ and $(x_{n})_{n\in\mathbb{N}}$ is decreasing, so $x=3$ is impossible and we must have $x=1$.
+    \item Suppose $f:\mathbb{R}\to\mathbb{R}$ satisfies: $|f(x)|\leq C|x|$ $\forall x\in\mathbb{R}$ and $C\geq0$. use the "$\varepsilon-\delta$" definition of continuity to show that $f$ is continuous at 0.\\
+    Soln: The inequality shows that $|f(0)|\leq0$ so $f(0)=0$. Thus, $|f(x)-f(0)|=|f(x)|\leq C|x|$. If $C\neq0$ then, given $\varepsilon>0$, we can let $\delta_{\varepsilon}=\varepsilon/C$; if $|x-0|<\delta_{\varepsilon}$ then $|x|<\varepsilon/C$ so $|f(x)-f(0)|=|f(x)|\leq C\varepsilon/C=\varepsilon$ Which shows that $f$ continuous at 0. If $C=0$ then $f(x)=0\,\forall x$ so $f$ trivially continuous: any $\delta_{\varepsilon}$ works.
+\end{itemize}
+\end{multicols}
+\end{document}
