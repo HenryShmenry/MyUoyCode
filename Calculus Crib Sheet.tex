@@ -1,0 +1,144 @@
+\documentclass[10pt]{article}
+\usepackage[margin=0.6in]{geometry}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usepackage{multicol}
+\usepackage{mathrsfs}
+\usepackage{graphicx}
+\pagestyle{fancy}
+
+\begin{document}
+\lhead{\color{blue}Calculus 1 - Crib Sheet}
+\chead{\color{blue}Henry Wise}
+\rhead{\color{blue}Summer Exam EOY}
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Difference Quotient: $\frac{f(x+h)-f(x)}{h}=\frac{f(y)-f(x)}{y-x}$
+    \item \textbf{AL1:} (localisation principle) For any fixed $r>0$, $\lim_{x\to x_{0}}f(x)$ is unaffected by points on $f(x)$ where $|x_{0}-x|>r$.
+    \item \textbf{AL2:} For $f(x)\to L$ and $C\in\mathbb{R}$, $Cf(x)\to CL$, and$C+f(x)\to C+L$
+    \item\textbf{AL3:} (Sandwich Theorem)
+    \item\textbf{AL4:} $f(x)\pm g(x)\to L\pm M$; \textbf{AL5:} $f(x)g(x)\to LM$
+    \item\textbf{AL6:} $f(x)/g(x)\to L/M,\,M\neq0$
+    \item\textbf{AL7:} (composition property) If $g(y)\to z_{0}$ as $f(x)\to y_{0}$ then$(g\circ f)(x)\to z_{0}$
+    \item $\sum^{N}_{n=0}ar^{n}=\frac{a(1-r^{N+1})}{1-r}\to\frac{1}{1-r},\text{if $|x|<1$}$
+    \item\textbf{AIL1:} Same as AL1
+    \item\textbf{AIL2:} if $f(x)\to\pm\infty$ then $Cf(x)\to\pm\infty$
+    \item\textbf{AIL3:} if $f(x)\to\infty,\,g(x)\geq C\forall x$ then $f(x)+g(x)\to\infty$; \textbf{AIL4:} if $f(x)\to\pm\infty$ then $1/f(x)\to0$
+    \item $f:D\to\mathbb{R}$ is continuous on $D$ if, for every $x_{0}\in D,\,f(x)\to f(x_{0})$ as $x\to x_{0}$.
+    \item Every polynomial is continuous on $\mathbb{R}$; every rational function is continuous everywhere when the denominator isn't 0.
+    \item $f'(x)=\lim_{h\to0}(\text{Difference Quotient})$
+    \item Remainder Term: $f(x+h)=\underbrace{f(x)+hf'(x)}_{\text{Local Linear Approx}}+r(h)$ where $r(h)/h\to0$
+    \item Differentiability $\implies$ continuity
+    \item Compositions of continuous functions are continuous (By AL1-7).
+    \item Additivity: $(f+g)'(x)=f'(x)+g'(x)$
+    \item Product Rule: $(fg)'(x)=f(x)g'(x)+f'(x)g(x)$
+    \item Chain Rule: $(f\circ g)'(x)=f'(g(x))g'(x)$
+    \item Quotient Rule: $(f/g)'(x)=\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^{2}}$
+    \item Left and right derivatives exist. Apply left/right limits to the difference quotient.
+    \item L'H$\hat{\text{o}}$pital's Rule: $f(x_{0})=g(x_{0})=0$, $g'(x_{0})\neq0$ then $\frac{f(x)}{g(x)}\to\frac{f'(x_{0})}{g'(x_{0})}$.
+    \item or $\lim_{x\to x_{0}}\frac{f(x)}{g(x)}=\lim_{x\to x_{0}}\frac{f'(x)}{g'(x)}$
+    \item Parametric Curve: $\gamma'(t)=(x'(t),y'(t))$ Speed: $|\gamma'(t)|$
+    \item\textbf{IVT:} Suppose $a<b$ and $f$ continuous on~$[a,b]$. Then for every $y$ such that min($f(a)$,$f(b)$)$<y<$max($f(a)$,$f(b)$) $\exists x\in(a,b)$ st $f(x)=y$
+    \item\textbf{EVT:} $\exists x_{\text{min}},x_{\text{max}}\in[a,b]$ st $\forall x\in[a,b]$, $f(x_{\text{min}})\leq f(x)\leq f(x_{\text{max}})$.
+    \item Every strictly monotonic function is injective (1-1).
+    \item\textbf{IFT:} $f:I\to\mathbb{R}$ and strictly monotonic then $f^{-1}$ is continuous.
+    \item local extremum at $x_{0}$ then $f'(x_{0})=0$. Stationary/ Turning/ Critical Point.
+    \item\textbf{MVT:} $\exists x_{0}\in(a,b)$ st $f'(x_{0})=\frac{f(b)-f(a)}{b-a}$.
+    \item $(f^{-1})'(y)=1/f'(f^{-1}(y))$
+    \item $(1+h)^{u}\approx1+uh$ if $h$ is small.
+    \item Every real polynomial of odd degree has a real zero (root).
+    \item $x^{y}=exp(y\log{x})$ and $\Big{(}1+\frac{x}{y}\Big{)}^{y}\to e^{x}$ as $y\to\infty$
+    \item Solutions of $u''=-u\implies u(x)=A\cos(x)+B\sin(x)$
+    \item $\sin(x\pm y)=\sin(x)\cos(y)\pm\cos(x)\sin(y)$
+    \item $\cos(x\pm y)=\cos(x)\cos(y)\mp\sin(x)\sin(y)$
+    \item $\frac{\sin(h)}{h}\to1$ as $h\to 0$
+    \item $(\sin^{-1}(x))'=1/\sqrt{1-x^{2}}$; $(\cos^{-1}(x))'=-1/\sqrt{1-x^{2}}$
+    \item $(\tan^{-1}(x))'=1/(1+x^{2})$
+    \item $\cos(z)=\frac{1}{2}(e^{iz}+e^{-iz})$; $\sin(z)=\frac{1}{2i}(e^{iz}-e^{-iz})$
+    \item $\exp(w)=z\implies w=\log|z|+i(\theta+2k\pi)$
+    \item $\tanh(x+y)=\frac{\tanh(x)+\tanh(y)}{1+\tanh(x)tanh(y)}$
+    \item $\sinh'=\cosh$; $\tanh{}'=\text{sech}^{2}$
+    \item $(\sinh^{-1})'=1/\sqrt{1+x^{2}}$; $(\cosh^{-1})'=1/\sqrt{x^{2}-1}$; $(\tanh^{-1})'=1/(1-x^{2})$
+    \item Riemann Sums: $R=\sum^{n}_{j=1}(x_{j}-x_{j-1})f(c_{j})$
+    \item \textbf{MVTI:} $f(x_{0})\int^{b}_{a}g=\int^{b}_{a}fg$ Consider $g=1$
+    \item \textbf{FTC 1:} $F(x)=\int^{x}_{a}f$; \textbf{FTC 2:} $\int^{b}_{a}f'=f(b)-f(a)$
+    \item Gamma f$^{\underline{n}}$: $\Gamma(\alpha)=\int^{\infty}_{0}x^{\alpha-1}e^{-x}\,dx$
+    \item $\Gamma(\alpha+1)=\alpha(\Gamma(\alpha)),\,(a>0)$; $\Gamma(n)=(n-1)!,\,(n\in\mathbb{N})$
+    \item Gaussian Int: $\int^{\infty}_{-\infty}e^{-x^{2}}=\sqrt{\pi}$
+    \item Arc Length:$L(\gamma)=\int^{b}_{a}|\gamma'(t)|\,dt$
+    \item Radian Measure: $r(\phi-\theta),\,(\theta<\phi)$
+    \item Rev: $V=\pi\int^{b}_{a}(r(x))^{2}\,dx$; $A=2\pi\int^{b}_{a}r(x)\sqrt{1+r'(x)^{2}}\,dx$
+    \item Taylor Th$^{\underline{m}}$: $f(x)=\sum^{N}_{n=0}\frac{f^{(n)}(x_{0})}{n!}(x-x_{0})^{n}+\frac{1}{N!}\int^{x}_{x_{0}}(x-t)^{N}f^{(N+1)}(t)\,dt$
+    \item Lagrange Remainder: $R_{N}(x)=\frac{(x-x_{0})^{N+1}}{(N+1)!}f^{(N+1)}(c)$
+\end{itemize}
+\end{multicols}
+
+\newpage
+\lhead{\color{red}Calculus 2 - Crib Sheet}
+\chead{\color{red}Henry Wise}
+\rhead{\color{red}Summer Exam EOY}
+
+\begin{multicols}{2}
+\begin{itemize}
+    \item Fourier: $S(x)=\frac{a_{0}}{2}+\sum^{\infty}_{n=1}(\mathbf{a_{n}}\cos{nx}+\mathbf{b_{n}}\sin{nx})$
+    \item $\mathbf{a_{n}}=\frac{1}{\pi}\int^{\pi}_{-\pi}f(x)\cos{nx}\,dx$; $\mathbf{b_{n}}=\frac{1}{\pi}\int^{\pi}_{-\pi}f(x)\sin{nx}\,dx$
+    \item Even: $f(-x)=f(x)$; Odd: $f(-x)=-f(x)$
+    \item $\int^{a}_{-a}(\text{Odd})=0$
+    \item $f(x^{\pm})=\lim_{\zeta\to x^{\pm}}f(\zeta)$
+    \item $f$ continuous when $f(x_{0})=f(x_{0}^{-})=f(x_{0}^{+})$
+    \item Piecewise Continuous (PC): not Continuous for finite many points.
+    \item PC Differentiable: PC, Diffable at most points, derivative is PC.
+    \item Periodic Extension: $\widetilde{f}(x+2k\pi):=f(x),\,(k\in\mathbb{Z})$ and $-\pi\leq x<\pi$
+    \item Fourier Convergence Th$^{\underline{m}}$: Fourier Series of $f$ converges to $\lim_{N\to\infty}S_{N}(x)=S(x)=\frac{1}{2}(\widetilde{f}(x^{+})+\widetilde{f}(x^{-}))$
+    \item Parseval Th$^{\underline{m}}$: $\frac{1}{\pi}\int^{\pi}_{\pi}f^{2}(x)\,dx=\frac{a_{0}}{2}+\sum^{\infty}_{n=1}(a_{n}^{2}+b_{n}^{2})$
+    \item R.Zeta fn: $\zeta(s):=\sum^{\infty}_{n=1}\frac{1}{n^{s}}=\prod_{p\text{prime}}\frac{1}{1-p^{-s}},\,(s>1)$
+    \item Riemann Conjecture: $\zeta(s),\,(s\in\mathbb{C})\implies\zeta(s)=0$ at $\Re(z)=1/2$
+    \item $\frac{\partial f}{\partial x}=\frac{f(x+h,y)-f(x,y)}{h}$
+    \item If $f(x,y)$ defined for open region: $f_{xy}(a,b)=f_{yx}(a,b)$
+    \item $F(t)=f[\underline{r}(t)]=f[x(t),y(t)]$
+    \item $F'(t)=x'(t)f_{x}[x(t),y(t)]+y'(t)f_{y}[x(t),y(t)]$
+    \item Gradient: $\nabla f:=\frac{\partial f}{\partial x}\underline{i}+\frac{\partial f}{\partial y}\underline{j}$
+    \item Directional Deriv: $D_{\underline{u}}f(\underline{r}_{0}):=\lim_{h\to0}\frac{f(\underline{r}_{0}+h\underline{u})-f(\underline{r}_{0})}{h}$
+    \item $\frac{dy}{dx}=-\frac{f_{x}(x,y)}{f_{y}(x,y)}$; $\Big{(}\frac{\partial z}{\partial x}\Big{)}_{y}=-\frac{F_{x}}{F_{z}}$; $\Big{(}\frac{\partial z}{\partial y}\Big{)}_{x}=-\frac{F_{y}}{F_{z}}$
+    \item Laplacian of a fn: $\Delta f\equiv\nabla^{2}f=\frac{\partial^{2}f}{\partial x^{2}}+\frac{\partial^{2} f}{\partial y^{2}}$
+    \item Polar Laplacian: $\Delta f\equiv^{2}f=\frac{\partial^{2}F}{\partial r^{2}}+\frac{1}{r}\frac{\partial F}{\partial r}+\frac{1}{r^{2}}\frac{\partial^{2}F}{\partial\theta^{2}}$
+    \item Fubini Th$^{\underline{m}}$ (weak): \\
+    $R:=\{(x,y)\in\mathbb{R}^{2}|a\leq x\leq b,\,c\leq y\leq d\}$,\\
+    $\iint_{R}f\,dA=\int^{b}_{a}(\int^{d}_{c}f(x,y)\,dy)\,dx=\int^{d}_{c}(\int^{b}_{a}f(x,y)\,dx)\,dy$
+    \item $R_{1}=\{(x,y)\in\mathbb{R}^{2}|a\leq x\leq b,\,\varphi_{1}(x)\leq y\leq\varphi_{2}(x)\}$
+    \item $R_{2}=\{(x,y)\in\mathbb{R}^{2}|c\leq y\leq d,\,\psi_{1}(x)\leq x\leq\psi_{2}(x)\}$
+    \item $\iint_{R_{1}}f\,dA=\int^{b}_{a}(\int^{\varphi_{2}(x)}_{\varphi_{1}(x)}f(x,y)\,dy)\,dx$
+    \item $\iint_{R_{2}}f\,dA=\int^{d}_{c}(\int^{\psi_{2}(y)}_{\psi_{1}(y)}f(x,y)\,dx)\,dy$
+    \item Centroid of region: \\$\Bar{x}=\frac{1}{A(R)}\iint_{R}x\,dA$, $\Bar{y}=\frac{1}{A(R)}\iint_{R}y\,dA$; $A(R)=$ Area.
+    \item $\iint_{R}f(x,y)\,dxdy=\iint_{S}f[x(u,v),y(u,v)]|J(u,v)|\,dudv$
+    \item $J=\begin{pmatrix}\partial x/\partial u &\partial x/\partial v\\\partial y/\partial u & \partial y/\partial v\end{pmatrix}$
+    \item SP at $\nabla f(x_{0},y_{0})=0$; SaddleP is a SP but not Extrema.
+    \item Hessian Matrix: $H(x,y):=\begin{pmatrix}f_{xx}(x,y) &f_{xy}(x,y)\\f_{yx}(x,y) &f_{yy}(x,y)\end{pmatrix}$
+    \item $\Delta(x_{0},y_{0})=\det H(x_{0},y_{0})$
+    \item $\Delta>0,f_{xx}>0\implies$ minimum\\ $\Delta>0, f_{xx}<0\implies$ maximum $\Delta<0\implies$ Saddle
+    \item Constrained SP:\\ $D_{\underline{u}}f(x_{0},y_{0})=\underline{u}\cdot\nabla f(x_{0},y_{0})=0$ $\forall\underline{u}$ tangent to $C$\\
+    $\underline{u}\perp\nabla f$; $\underline{u}\perp\nabla g$ ($g(x,y)=C$)$\implies\nabla f=\lambda\nabla g$\\
+    3 Conditions:\\
+    $f_{x}=\lambda g_{x}$, $f_{y}=\lambda g_{y}$, $g(x,y)=c$
+    \item Lagrange constrained SP:\\
+    $F(x,y;\lambda)=f(x,y)-\lambda(g(x,y)-c)$ then $\nabla F=(0,0,0)$
+    \item A set of functions are linearly independent if none of the functions are linear combinations of theothers.
+    \item Any linear combination of two solutions is a solution. 
+    \item Ansatz: A guess for the form of a solution to a problem such as a DE.
+    \item We often use $y=e^{\lambda x}$
+    \item If $y_{p}$ is a particular solution then any other solution can be written as $y=y_{p}+u$ where $u$ isthe homogeneous equation. 
+    \item Linearity: If $L[y_{1}]=r_{1}$ and $L[y_{2}]=r_{2}$ then $y:=y_{1}+y_{2}$ is a solution of$L[y]=r_{1}+r_{2}$.
+    \item If $\lambda=s,r\in\mathbb{R}$ then: $y=Ae^{sx}+Be^{rx}$,\\
+    If $\lambda=p$ then: $y=(A+Bx)e^{px}$;\\
+    If $\lambda=z,z^{*}$ then: $y=e^{\Re{z}}(A\cos{\Im{z}}+B\sin{\Im{z}})$
+    \item$\frac{px+q}{(x-a)^{2}}=\frac{A}{x-a}+\frac{B}{(x-a)^{2}}$
+    \item Level surface: $\{(x,y,z)\in\mathbb{R}^{3}|F(x,y,z)=c\}$
+    \item Tangent Vector surface: $\nabla f(\underline{x}_{0})\cdot(\underline{x}-\underline{x}_{0})=0$
+    \item Normal Vector surface: $\nabla f(\underline{x}_{0})\cdot(\underline{x})=0$
+    \end{itemize}
+\end{multicols}
+\end{document}
